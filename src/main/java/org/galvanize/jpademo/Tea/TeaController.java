@@ -10,11 +10,8 @@ import java.util.List;
 @RequestMapping("/api/teas")
 public class TeaController {
 
+    @Autowired
     TeaService service;
-
-    public TeaController(TeaService service) {
-        this.service = service;
-    }
 
     @GetMapping
     public List<Tea> getAllTea() {
